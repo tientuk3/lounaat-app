@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lounaat-app/static/css/main.816131f1.css",
-    "main.js": "/lounaat-app/static/js/main.0b6f3403.js",
+    "main.js": "/lounaat-app/static/js/main.a7e65cff.js",
     "index.html": "/lounaat-app/index.html",
     "main.816131f1.css.map": "/lounaat-app/static/css/main.816131f1.css.map",
-    "main.0b6f3403.js.map": "/lounaat-app/static/js/main.0b6f3403.js.map"
+    "main.a7e65cff.js.map": "/lounaat-app/static/js/main.a7e65cff.js.map"
   },
   "entrypoints": [
     "static/css/main.816131f1.css",
-    "static/js/main.0b6f3403.js"
+    "static/js/main.a7e65cff.js"
   ]
 }
