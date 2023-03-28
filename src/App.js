@@ -1,24 +1,53 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react' 
+import axios from 'axios'
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
+const API_URL = 'http://192.210.133.140:8000/lounaat'
+
+const App = () => {
+  const [restaurants, setRestaurants] = useState([])
+
+  useEffect(() => {
+    console.log('fetching data')
+    axios.get(API_URL)
+      .then(response => {
+        console.log('got data')
+        console.log(response.data)
+        setRestaurants(response.data)
+      })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Container fluid>
+      <Row>
+      {restaurants.map((r, i) => (
+          <Col xs="3">
+            <Card text='light'
+                className="dark-card"
+                key={i}
+            >
+              <Card.Body>
+                <Card.Title>{r.name}</Card.Title>
+                <ListGroup variant="flush">
+                  {r.dishes.map((d) => (
+                    <ListGroup.Item className="dark-card">{d}</ListGroup.Item>
+                  ))}
+                </ListGroup>
+              </Card.Body>
+            </Card>
+          </Col>
+          ))}
+      </Row>
+    </Container>
+    
+    </>
   );
 }
 
