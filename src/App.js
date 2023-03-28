@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-const API_URL = 'http://192.210.133.140:8000/lounaat'
+const API_URL = 'https://api.tuk3diagnostics.com/lounaat/'
 
 const App = () => {
   const [restaurants, setRestaurants] = useState([])
