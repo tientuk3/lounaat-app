@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Card, CardContent, CardActions, Typography, Box, Grid, CardHeader, List, ListItem, ListSubheader, ListItemText } from '@mui/material';
 import { Container } from '@mui/material'
 
-const API_URL = 'https://api.tuk3diagnostics.com/lounaat'
+const API_URL = 'https://api.tuk3diagnostics.com/lounaat/'
 
 const App = () => {
   const [restaurants, setRestaurants] = useState([])
@@ -24,7 +24,7 @@ const App = () => {
       <Grid container spacing={2}>
         {restaurants.map((r, i) => (
           <Grid item>
-            <Card variant="elevation" raised='true' sx={{ maxWidth: 400, borderRadius: 3 }}>
+            <Card variant="elevation" sx={{ maxWidth: 400, borderRadius: 3 }}>
               <CardContent>
                 <CardHeader align='center' title={r.name} />
                 <Typography align='center' sx={{ fontStyle: 'italic' }}>{r.address}</Typography>
