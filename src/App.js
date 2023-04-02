@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react' 
 import axios from 'axios'
-import { Card, CardContent, CardActions, Typography, Box, Grid, CardHeader, List, ListItem, ListSubheader, ListItemText } from '@mui/material';
+import { Card, CardContent, Divider, Typography, Box, Grid, CardHeader, List, ListItem, ListSubheader, ListItemText } from '@mui/material';
 import { Container } from '@mui/material'
 
 const API_URL = 'https://api.tuk3diagnostics.com/lounaat/'
@@ -31,9 +31,13 @@ const App = () => {
                 <Typography align='center' sx={{ fontStyle: 'italic' }}>Etäisyys {r.distance}</Typography>
                   <List sx = {{listStyleType: 'disc', pl: 2, }}>
                     {r.dishes.map((d, i) => (
-                      <ListItem key={i} sx={{ display: 'list-item' }}>
-                        <ListItemText primary={d} />
-                      </ListItem>
+                      <>
+                        <Divider />
+                        <ListItem key={i} sx={{ display: 'list-item' }}>
+                          <ListItemText primary={d} />
+                        </ListItem>
+                      </>
+                      
                     ))}
                   </List>
               </CardContent>
