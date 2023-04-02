@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/lounaat-app/static/js/main.5d45020b.js",
+    "main.js": "/lounaat-app/static/js/main.e3aa3949.js",
     "index.html": "/lounaat-app/index.html",
-    "main.5d45020b.js.map": "/lounaat-app/static/js/main.5d45020b.js.map"
+    "main.e3aa3949.js.map": "/lounaat-app/static/js/main.e3aa3949.js.map"
   },
   "entrypoints": [
-    "static/js/main.5d45020b.js"
+    "static/js/main.e3aa3949.js"
   ]
 }
